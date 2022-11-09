@@ -10,6 +10,7 @@ namespace AllAzAlku
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("alma");
         }
     }
 }

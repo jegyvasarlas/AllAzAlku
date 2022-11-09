@@ -1,0 +1,8 @@
+C:\Users\admin\Documents\GitHub\AllAzAlku\bin\Debug\AllAzAlku.exe.config
+C:\Users\admin\Documents\GitHub\AllAzAlku\bin\Debug\AllAzAlku.exe
+C:\Users\admin\Documents\GitHub\AllAzAlku\bin\Debug\AllAzAlku.pdb
+C:\Users\admin\Documents\GitHub\AllAzAlku\obj\Debug\AllAzAlku.csproj.AssemblyReference.cache
+C:\Users\admin\Documents\GitHub\AllAzAlku\obj\Debug\AllAzAlku.csproj.SuggestedBindingRedirects.cache
+C:\Users\admin\Documents\GitHub\AllAzAlku\obj\Debug\AllAzAlku.csproj.CoreCompileInputs.cache
+C:\Users\admin\Documents\GitHub\AllAzAlku\obj\Debug\AllAzAlku.exe
+C:\Users\admin\Documents\GitHub\AllAzAlku\obj\Debug\AllAzAlku.pdb
