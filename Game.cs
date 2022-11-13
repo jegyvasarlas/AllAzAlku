@@ -6,7 +6,7 @@ namespace Main
 {
     class Game
     {
-        public enum Rewards
+        private enum Rewards
         {
             One = 1,
             Five = 5,
@@ -32,54 +32,39 @@ namespace Main
             TwentyMillion = 20000000,
             FiftyMillion = 50000000
         }
-        public static Dictionary<int, int> FillUp(Dictionary<int, int> whichBriefcaseHasWhichReward)
+        public static SortedDictionary<int, int> FillUp(SortedDictionary<int, int> whichBriefcaseHasWhichReward)
         {
             HashSet<int> numbers = new HashSet<int>();
-
             Random r = new Random();
-
             while (numbers.Count != 23)
-            {
                 numbers.Add(r.Next(1, 24));
-            }
-
             List<int> numbersList = new List<int>();
-
             foreach (var number in numbers)
-            {
                 numbersList.Add(number);
-            }
-
             int index = 0;
-
             foreach (int i in Enum.GetValues(typeof(Rewards)))
             {
-                whichBriefcaseHasWhichReward.Add(i, numbersList[index]);
+                whichBriefcaseHasWhichReward.Add(numbersList[index], i);
                 index++;
             }
-
             return whichBriefcaseHasWhichReward;
         }
-        public static void PrintOutOrderByReward(Dictionary<int, int> whichBriefcaseHasWhichReward)
-        {
-            foreach (KeyValuePair<int, int> item in whichBriefcaseHasWhichReward)
-            {
-                Console.WriteLine($"ID: {item.Value.ToString()} \tReward: {item.Key}");
-            }
-        }
-        public static void PrintOutOrderByID(Dictionary<int, int> whichBriefcaseHasWhichReward)
+        private static void PrintOutOrderByReward(SortedDictionary<int, int> whichBriefcaseHasWhichReward)
         {
             foreach (KeyValuePair<int, int> item in whichBriefcaseHasWhichReward.OrderBy(x => x.Value))
-            {
-                Console.WriteLine($"ID: {item.Value.ToString()} \tReward: {item.Key}");
-            }
+                Console.WriteLine($"ID: {item.Key} \t Reward {item.Value.ToString()}");
         }
-        public static void Inspect(Dictionary<int, int> whichBriefcaseHasWhichReward)
+        private static void PrintOut(SortedDictionary<int, int> whichBriefcaseHasWhichReward)
+        {
+            foreach (KeyValuePair<int, int> item in whichBriefcaseHasWhichReward)
+                Console.WriteLine($"ID: {item.Key} \t Reward {item.Value.ToString()}");
+        }
+        public static void Inspect(SortedDictionary<int, int> whichBriefcaseHasWhichReward)
         {
             Console.WriteLine("ID szerint rendezve:");
-            PrintOutOrderByID(whichBriefcaseHasWhichReward);
+            PrintOut(whichBriefcaseHasWhichReward);
             Console.WriteLine();
-            Console.WriteLine("Nyerememeny szerint rendezve:");
+            Console.WriteLine("Nyeremény szerint rendezve:");
             PrintOutOrderByReward(whichBriefcaseHasWhichReward);
 
         }
