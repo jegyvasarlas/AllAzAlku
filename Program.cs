@@ -1,18 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace AllAzAlku
+namespace Main
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("alma");
-
+            Dictionary<int, int> briefcases = new Dictionary<int, int>();
+            Game.FillUp(briefcases);
+            Game.Inspect(briefcases);
             Console.ReadKey();
-        }
+        } 
     }
 }
