@@ -52,12 +52,12 @@ namespace Main
         private static void PrintOutOrderByReward(SortedDictionary<int, int> whichBriefcaseHasWhichReward)
         {
             foreach (KeyValuePair<int, int> item in whichBriefcaseHasWhichReward.OrderBy(x => x.Value))
-                Console.WriteLine($"ID: {item.Key} \t Reward {item.Value.ToString()}");
+                Console.WriteLine($"ID: {item.Key} \t Reward: {item.Value.ToString()}");
         }
         private static void PrintOut(SortedDictionary<int, int> whichBriefcaseHasWhichReward)
         {
             foreach (KeyValuePair<int, int> item in whichBriefcaseHasWhichReward)
-                Console.WriteLine($"ID: {item.Key} \t Reward {item.Value.ToString()}");
+                Console.WriteLine($"ID: {item.Key} \t Reward: {item.Value.ToString()}");
         }
         public static void Inspect(SortedDictionary<int, int> whichBriefcaseHasWhichReward)
         {
@@ -66,7 +66,7 @@ namespace Main
             Console.WriteLine();
             Console.WriteLine("Nyeremény szerint rendezve:");
             PrintOutOrderByReward(whichBriefcaseHasWhichReward);
-
+            Console.WriteLine();
         }
     }
 }

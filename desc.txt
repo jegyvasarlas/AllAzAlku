@@ -1,0 +1,7 @@
+﻿A játék úgy indul, hogy a játékos választ egy neki szimpatikus táskát, amelyet nem nyithat ki a játék végéig.
+
+Ezek után a játék körökre lesz osztva, első körbe 5, majd háromszor 3, aztán újból háromszor 2, táskát kell nyitnia (körönként), majd a maradék táskákat egyesével.
+
+Minden kör végén a Bank igazgatója tesz egy ajánlatot a még játékban lévő táskákban lévő összegek alapján. A játékos elfogadhatja ezt az ajánlatot, ilyenkor ezt az összeget nyeri meg. Ha játékos nem fogadja el az ajánlatot, akkor újabb körben nyithat táskákat, amelynek végén ismét a bank ajánlata következik.
+
+Ha játékos egyszer sem fogadja el a bank ajánlatát és már minden táskát kinyitott (a sajátját kivéve), akkor utolsóként a saját táskáját nyitja ki, ezzel megnyerve a benne lévő összeget.
